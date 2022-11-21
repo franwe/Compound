@@ -1,0 +1,74 @@
+{
+    "0": {
+        "symbol": "usdp",
+        "id": "paxos-standard"
+    },
+    "1": {
+        "symbol": "tusd",
+        "id": "true-usd"
+    },
+    "2": {
+        "symbol": "rep",
+        "id": "augur"
+    },
+    "3": {
+        "symbol": "uni",
+        "id": "uniswap"
+    },
+    "4": {
+        "symbol": "usdc",
+        "id": "usd-coin"
+    },
+    "5": {
+        "symbol": "sushi",
+        "id": "sushi"
+    },
+    "6": {
+        "symbol": "eth",
+        "id": "ethereum"
+    },
+    "7": {
+        "symbol": "dai",
+        "id": "dai"
+    },
+    "8": {
+        "symbol": "bat",
+        "id": "basic-attention-token"
+    },
+    "9": {
+        "symbol": "comp",
+        "id": "compound-governance-token"
+    },
+    "10": {
+        "symbol": "fei",
+        "id": "fei-usd"
+    },
+    "11": {
+        "symbol": "yfi",
+        "id": "yearn-finance"
+    },
+    "12": {
+        "symbol": "zrx",
+        "id": "0x"
+    },
+    "13": {
+        "symbol": "wbtc",
+        "id": "wrapped-bitcoin"
+    },
+    "14": {
+        "symbol": "aave",
+        "id": "aave"
+    },
+    "15": {
+        "symbol": "dai",
+        "id": "dai"
+    },
+    "16": {
+        "symbol": "usdt",
+        "id": "tether"
+    },
+    "17": {
+        "symbol": "link",
+        "id": "chainlink"
+    }
+}
