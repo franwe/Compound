@@ -22,6 +22,15 @@ def download(asset: str, date: str) -> Dict:
     return line_dict
 
 
+def load_empty_line(asset: str, date: str) -> Dict:
+    return {
+        "date": date.date(), 
+        "symbol": asset["symbol"], 
+        "id": asset["id"], 
+        "price": None
+        }
+
+
 if __name__ == "__main__":
     
     # setup
@@ -36,7 +45,17 @@ if __name__ == "__main__":
     # download loop
     for date in dates:
         for asset in assets.values():
-            line_dict = download(asset, date)
+            try: 
+                line_dict = download(asset, date)
+            except Exception as e:
+                print(f" --- failed to download . try again - {asset} {date}")
+                try:
+                    time.sleep(30)
+                    line_dict = download(asset, date)
+                except Exception as e:
+                    print(f" --- failed to download again ! save empty - {asset} {date}")
+                    line_dict = load_empty_line(asset, date)
+
             print(line_dict)
             line = pd.DataFrame(line_dict, index=[0])
             if not OUT_FILE.exists():
