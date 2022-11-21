@@ -60,14 +60,10 @@
         "id": "aave"
     },
     "15": {
-        "symbol": "dai",
-        "id": "dai"
-    },
-    "16": {
         "symbol": "usdt",
         "id": "tether"
     },
-    "17": {
+    "16": {
         "symbol": "link",
         "id": "chainlink"
     }
