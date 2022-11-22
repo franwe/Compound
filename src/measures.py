@@ -18,5 +18,29 @@ def simulate_path(start_price: float, volatility: float, horizon: int) -> np.arr
 
 
 def monte_carlo_simulation(start_price: float, volatility: float, horizon: int, paths: int) -> np.array:
-    paths = [simulate_path(start_price, volatility, horizon) for _ in range(paths)]
+    paths = [simulate_path(start_price, volatility, horizon)[-1] for _ in range(paths)]
     return np.array(paths)
+
+
+def calc_value_usd(n_ctoken, exchange_rate, prices):
+    # create shapes
+    s = n_ctoken.reshape((n_ctoken.shape[0], 1))
+    x = exchange_rate.reshape((exchange_rate.shape[0], 1))
+    if len(prices.shape) == 1:
+        p = prices.reshape((prices.shape[0], 1))
+    else:
+        p = prices
+
+    # multiply element-wise 
+    values = np.multiply(s * x, p)
+    return values
+
+
+def calc_borrow_value_usd(n_ctoken, exchange_rate, prices):
+    return calc_value_usd(n_ctoken, exchange_rate, prices)
+
+
+def calc_supply_value_usd(n_ctoken, exchange_rate, collateral_factor, prices):
+    f = collateral_factor.reshape((n_ctoken.shape[0], 1))
+    values = calc_value_usd(n_ctoken, exchange_rate, prices)
+    return np.multiply(f, values)
