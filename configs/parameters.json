@@ -1,4 +1,5 @@
 {
-    "mc_horizon": 7,
-    "mc_paths": 10
+    "mc_horizon": 100,
+    "mc_paths": 10000,
+    "var_percentile": 0.1
 }

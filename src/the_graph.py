@@ -12,12 +12,12 @@ class TheGraphAPI:
                     markets {
                         underlyingSymbol
                         underlyingName
-                        borrowRate
-                        totalBorrows
                         collateralFactor
+                        exchangeRate
+                        totalBorrows
+                        totalSupply
                         underlyingPriceUSD
                         blockTimestamp
-                        accrualBlockNumber
                     }
                     }
                 """
