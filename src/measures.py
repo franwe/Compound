@@ -40,7 +40,7 @@ def calc_borrow_value_usd(n_ctoken, exchange_rate, prices):
     return calc_value_usd(n_ctoken, exchange_rate, prices)
 
 
-def calc_supply_value_usd(n_ctoken, exchange_rate, collateral_factor, prices):
+def calc_collateral_value_usd(n_ctoken, exchange_rate, collateral_factor, prices):
     f = collateral_factor.reshape((n_ctoken.shape[0], 1))
     values = calc_value_usd(n_ctoken, exchange_rate, prices)
     return np.multiply(f, values)

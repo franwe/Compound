@@ -1,5 +1,8 @@
 {
     "mc_horizon": 100,
     "mc_paths": 10000,
-    "var_percentile": 0.1
+    "var_accounts": 1000,
+    "var_percentile": 0.1,
+    "accounts_min_borrow_eth": 0.2,
+    "accounts_max_health": 2.0
 }

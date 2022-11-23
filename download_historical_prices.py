@@ -4,7 +4,7 @@ from typing import Dict
 import json
 import time
 
-from src.coingecko import CoingeckoAPI
+from coingecko_api import CoingeckoAPI
 
 CONFIGS_DIR = Path.cwd().joinpath("configs")
 OUT_FILE = Path.cwd().joinpath("data", "coingecko_prices.csv")
