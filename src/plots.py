@@ -11,9 +11,9 @@ def plot_mc_paths(symbol, mc):
     return fig
 
 
-def plot_returns_histogram(returns, N, bins=50):
+def plot_loss_histogram(returns, N, bins=50):
     fig = plt.hist(returns, bins=bins)
-    plt.xlabel("Returns")
+    plt.xlabel("Loss in USD")
     plt.ylabel("Amount")
-    plt.title(f"Simulated Portfolio Returns (N={N})")
+    plt.title(f"Simulated Losses (N={N})")
     return fig
