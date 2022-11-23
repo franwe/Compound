@@ -1,5 +1,6 @@
 {
     "mc_horizon": 100,
-    "mc_paths": 10000,
+    "mc_paths": 10,
+    "var_accounts": 100,
     "var_percentile": 0.1
 }

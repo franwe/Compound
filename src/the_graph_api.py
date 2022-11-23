@@ -10,6 +10,7 @@ class TheGraphAPI:
         url = f"{self.url}/{self.compound_endpoint}"
         query = """{
                     markets {
+                        symbol
                         underlyingSymbol
                         underlyingName
                         collateralFactor
@@ -17,6 +18,7 @@ class TheGraphAPI:
                         totalBorrows
                         totalSupply
                         underlyingPriceUSD
+                        underlyingPrice
                         blockTimestamp
                     }
                     }
